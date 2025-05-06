@@ -49,12 +49,18 @@ The goal of this project is to analyze customer behavior and identify key factor
 ## 🏁 Getting Started
 
 ## NoteBook
-
+https://github.com/RebeccaMorlong/telecom-churn-prediction.git
 ## Dataset
 https://www.kaggle.com/datasets/oluwademiladeadeniyi/mtn-nigeria-customer-churn
 
 ## 🖼️ Example Visualizations
+![agedist](https://github.com/user-attachments/assets/ce267e5b-2047-4704-8e9b-601c56c1bd50)
+![satisfaction rate](https://github.com/user-attachments/assets/420d2ee5-18f3-44e2-a7b6-83c9278cb32f)
+![tenure in months](https://github.com/user-attachments/assets/a5c4d1e7-d40e-41f9-a8d9-990cd48f58d9)
+![age vs data usage](https://github.com/user-attachments/assets/d360dd0b-ea1a-44fe-918c-aa301cf1a3c2)
+![age vs satisfaction rate](https://github.com/user-attachments/assets/a1bcd114-3fe0-4abc-8e26-1055686818fb)
+![correlation heatmap](https://github.com/user-attachments/assets/fc5005a7-6705-4b23-b180-34937bc32447)
 
-*(Save your plots in the `images/` folder and embed them here)*
+
 
 
