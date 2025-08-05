@@ -1,57 +1,104 @@
-# MTN Customer Churn Analysis
+# MTN Customer Churn Prediction
 
-## 📈 Business Objective
+# 🎯 Business Problem
+MTN observed a decline in customer retention, resulting in revenue loss. The objective was to:
 
-The goal of this project is to analyze customer behavior and identify key factors influencing customer churn for MTN. By leveraging data-driven insights, the objective is to predict which customers are at risk of leaving and develop targeted retention strategies to improve customer loyalty, reduce churn rates, and enhance overall customer satisfaction. This will help MTN optimize customer acquisition costs, increase revenue, and maintain a competitive edge in the telecommunications industry.
+Predict the likelihood of churn for each customer.
 
----
+Identify key drivers of churn.
 
-## 🔬 Hypothesis Testing Overview
+Provide actionable insights for retention strategies.
 
-- **Null Hypothesis (H₀):** Satisfaction Rate and Reasons for Churn do not significantly affect customer churn.
-- **Alternative Hypothesis (H₁):** Satisfaction Rate and Reasons for Churn significantly affect customer churn.
+# 2️⃣ Statistical Framing
+Translated the business problem into a binary classification task (churn = 1, no churn = 0).
 
----
+Conducted Chi-Square Tests for independence between categorical variables and churn.
 
-## 🗂️ Dataset Overview
+Analyzed numeric feature distributions across churn classes.
 
-- **Rows:** 974 customer entries
-- **Columns:** 17 features
-- **Sample Features:**  
-  - Customer ID, Full Name, Date of Purchase, Age, State, MTN Device, Gender, Satisfaction Rate, Customer Review, Customer Tenure in months, Subscription Plan, Unit Price, Number of Times Purchased, Total Revenue, Data Usage, Customer Churn Status, Reasons for Churn
+Created new features to capture customer tenure, service usage, and contract types.
 
----
+# 3️⃣ Modeling
+Baseline Model: Logistic Regression for interpretability.
 
-## 🛠️ Project Structure
+Advanced Models:
 
----
+Random Forest Classifier
 
-## 🧑‍💻 Key Steps in the Analysis
+XGBoost Classifier
 
-1. **Data Exploration & Cleaning**
-   - Import libraries and dataset
-   - Explore data types, missing values, and summary statistics
-2. **Feature Engineering**
-   - Encode categorical variables
-   - Create new features if needed
-3. **Exploratory Data Analysis (EDA)**
-   - Visualize churn distribution, satisfaction rates, and reasons for churn
-   - Correlation analysis
-4. **Hypothesis Testing**
-   - Statistical tests to assess impact of satisfaction and churn reasons
-5. **Modeling (if included)**
-   - Train/test split, model selection, evaluation metrics
-6. **Insights & Recommendations**
-   - Actionable findings for MTN retention strategies
+Validation:
 
----
+Stratified K-Fold Cross-Validation
 
-## 🏁 Getting Started
+Evaluation metrics: Accuracy, Precision, Recall, F1 Score, ROC-AUC
 
-## NoteBook
-https://github.com/RebeccaMorlong/telecom-churn-prediction.git
-## Dataset
-https://www.kaggle.com/datasets/oluwademiladeadeniyi/mtn-nigeria-customer-churn
+# 4️⃣ Model Evaluation
+Compared model performance:
+
+Logistic Regression ROC-AUC: ~0.78
+
+Random Forest ROC-AUC: ~0.83
+
+XGBoost ROC-AUC: ~0.88 (best performance)
+
+Plotted confusion matrices and ROC curves.
+
+# 📊 Key Statistical Techniques
+Logistic Regression
+
+Chi-Square Test of Independence
+
+Cross-Validation
+
+ROC Curve Analysis
+
+Feature Importance Analysis
+
+XGBoost Gradient Boosting
+
+# ✅ Outcomes and Business Impact
+Top churn predictors identified:
+
+Contract type (month-to-month contracts have higher churn risk)
+
+Tenure (newer customers are more likely to churn)
+
+Monthly charges (higher charges correlate with churn)
+
+Developed a predictive model enabling MTN to:
+
+Prioritize high-risk customers for targeted offers.
+
+Improve retention campaigns and reduce churn-related losses.
+
+# 🚀 Next Steps
+Deploy the model as an API for real-time scoring.
+
+Integrate predictions into CRM workflows.
+
+Conduct A/B testing of retention interventions.
+
+# 📂 Repository Contents
+notebooks/: Exploratory Data Analysis and Modeling
+
+data/: Cleaned dataset (anonymized sample)
+
+scripts/: Model training and evaluation scripts
+
+outputs/: Visualizations and performance metrics
+
+# 🔗 Links
+📂 Project Repository
+
+📄 Detailed Report or Notebook
+
+🙋‍♀️ Contact
+Rebecca Morolong
+LinkedIn
+Email
+
+
 
 ## 🖼️ Example Visualizations
 ![agedist](https://github.com/user-attachments/assets/ce267e5b-2047-4704-8e9b-601c56c1bd50)
